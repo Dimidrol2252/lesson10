@@ -1,0 +1,176 @@
+<html>
+	<head>
+	
+		<style>
+			.block
+			{
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition-property: background, border-radius, height;
+				transition-duration: 2s;
+				transition-timing-function: linear;
+			}
+			
+			.block:hover
+			{
+				background: green; 
+				border-radius: 50%;
+				height: 100%;
+			}
+			
+			.block1
+			{
+				width: 100px;
+				height: 100px;
+				background: green;
+				margin: 100px auto;
+				animation-name: puls;
+				animation-duration: 5s;
+				animation-timing-function: ease-in;
+				animation-iteration-count: infinite;
+			}
+			
+			@keyframes puls
+			{
+				0%
+				{
+					transform: scale(1);
+				}
+				50%
+				{
+					transform: scale(1.5);
+					box-shadow: 0 0 10px 10px grey;
+				}
+				100%
+				{
+					transform: scale(1);
+				}
+			}
+			
+			.inblock
+			{
+				background: blue;
+				height: 50px;
+				width: 50px;
+				animation-name: rot;
+				animation-duration: 10s;
+				animation-timing-function: ease-in;
+				animation-iteration-count: infinite;
+			}
+			
+			.block2
+			{
+				background: red;
+				height: 100px;
+				width: 100px;
+				margin: 100px auto;
+				padding: 25px;
+				box-sizing: border-box;
+				animation-name: rot;
+				animation-duration: 10s;
+				animation-timing-function: ease-in;
+				animation-iteration-count: infinite;
+			}
+			
+			@keyframes rot
+			{
+				0%
+				{
+					transform: rotate(0deg);
+				}
+				100%
+				{
+					transform: rotate(360deg);
+				}
+			}
+			
+			.block3
+			{
+				background: red;
+				height: 100px;
+				width: 100px;
+				animation-name: move;
+				animation-duration: 5s;
+				animation-timing-function: ease-out;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+			}
+			
+			@keyframes move
+			{
+				0%
+				{
+					margin-left: 0;
+				}
+				100%
+				{
+					margin-left: 300px;
+				}
+			}
+			
+			.row
+			{
+				display: flex;
+			}
+			
+			.button
+			{
+				align-items: center; 
+				padding: 0 40px; 
+				margin: 50px; 
+				background: blue; 
+			}
+			
+			.button-1
+			{
+				transition-property: transform; 
+				transition-duration: 2s;
+			}
+			
+			.button-1:hover
+			{
+				transform: scale(1.2);
+			}
+			
+			.button-2
+			{
+				border: 5px solid blue; 
+				transition-property: background, color; 
+				transition-duration: 2s;
+			}
+			
+			.button-2:hover
+			{
+				background: white; 
+				color: blue;  
+			}
+			
+			.button-3
+			{
+				transition-property: border-radius; 
+				transition-duration: 2s;
+			}
+			
+			.button-3:hover
+			{
+				border-radius: 10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class='block'></div>
+		<div class='block1'></div>
+		<div class='block2'><div class='inblock'></div></div>
+		
+		<div class='block3'></div>
+		
+		<div class='row'>
+			<div class='button button-1'>Нажми на меня</div>
+			<div class='button button-2'>Нажми на меня</div>
+			<div class='button button-3'>Нажми на меня</div>
+		</div>
+		
+	</body>
+</html> 
